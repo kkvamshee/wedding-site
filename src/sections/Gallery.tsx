@@ -12,12 +12,12 @@ export interface GalleryImage {
 }
 
 const galleryImages: GalleryImage[] = [
-  { src: '/images/gallery-1.jpg', alt: 'Couple dancing', aspectRatio: 'aspect-[3/4]' },
-  { src: '/images/gallery-2.jpg', alt: 'Wedding bouquet', aspectRatio: 'aspect-[4/3]' },
-  { src: '/images/gallery-3.jpg', alt: 'Happy couple', aspectRatio: 'aspect-square' },
-  { src: '/images/gallery-4.jpg', alt: 'Reception table', aspectRatio: 'aspect-[3/4]' },
-  { src: '/images/gallery-5.jpg', alt: 'Sunset moment', aspectRatio: 'aspect-[4/3]' },
-  { src: '/images/gallery-6.jpg', alt: 'Wedding rings', aspectRatio: 'aspect-square' },
+  { src: 'images/gallery-1.jpg', alt: 'Couple dancing', aspectRatio: 'aspect-[3/4]' },
+  { src: 'images/gallery-2.jpg', alt: 'Wedding bouquet', aspectRatio: 'aspect-[4/3]' },
+  { src: 'images/gallery-3.jpg', alt: 'Happy couple', aspectRatio: 'aspect-square' },
+  { src: 'images/gallery-4.jpg', alt: 'Reception table', aspectRatio: 'aspect-[3/4]' },
+  { src: 'images/gallery-5.jpg', alt: 'Sunset moment', aspectRatio: 'aspect-[4/3]' },
+  { src: 'images/gallery-6.jpg', alt: 'Wedding rings', aspectRatio: 'aspect-square' },
 ];
 
 const Gallery = () => {
