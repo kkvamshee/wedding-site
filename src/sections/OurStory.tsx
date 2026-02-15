@@ -18,28 +18,28 @@ const timelineEvents: TimelineEvent[] = [
     title: 'The First Meeting',
     description:
       'We met at a mutual friend\'s party. Little did we know that this chance encounter would change our lives forever. The connection was instant, and we talked for hours.',
-    image: '/images/timeline-1.jpg',
+    image: 'images/timeline-1.jpg',
   },
   {
     date: 'February 2020',
     title: 'Our First Date',
     description:
       'A romantic walk in the park followed by dinner at our favorite restaurant. We laughed, shared stories, and realized we had found something special.',
-    image: '/images/timeline-2.jpg',
+    image: 'images/timeline-2.jpg',
   },
   {
     date: 'December 2024',
     title: 'The Proposal',
     description:
       'Under a sky full of stars, Alex got down on one knee and asked the question that would begin our forever. It was the most magical moment of our lives.',
-    image: '/images/timeline-3.jpg',
+    image: 'images/timeline-3.jpg',
   },
   {
     date: 'June 2025',
     title: 'The Wedding',
     description:
       'We can\'t wait to celebrate our love surrounded by family and friends. Join us as we begin this new chapter of our lives together.',
-    image: '/images/timeline-4.jpg',
+    image: 'images/timeline-4.jpg',
   },
 ];
 
