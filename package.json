@@ -1,15 +1,15 @@
 {
-  "name": "my-app",
+  "name": "wedding-website",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://kkvamshee.github.io/wedding-rsvp",
+  "homepage": "https://kkvamshee.github.io/wedding-website",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
