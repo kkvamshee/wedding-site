@@ -58,6 +58,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   }, [theme]);
 
   const toggleTheme = (hex: string) => {
+    if (!hex) setTheme('dark');
     document.documentElement.style.setProperty('--background', hexToHSL(hex));
     //setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
   };

@@ -1,4 +1,4 @@
-import { Sun, Moon } from 'lucide-react';
+//import { Sun, Moon } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 import { Button } from '@/components/ui/button';
 
@@ -6,7 +6,7 @@ const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
 
   const onColorChange = (e: any) => {
-    console.log(e.target.value);
+    console.log(theme);
     toggleTheme(e.target.value);
   }
 
