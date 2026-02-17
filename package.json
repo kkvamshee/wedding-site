@@ -6,10 +6,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "npm run generate-manifest",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "generate-manifest": "node scripts/generate-asset-manifest.cjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -71,6 +73,7 @@
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
+    "fs": "^0.0.1-security",
     "gh-pages": "^6.3.0",
     "globals": "^16.5.0",
     "kimi-plugin-inspect-react": "^1.0.3",
