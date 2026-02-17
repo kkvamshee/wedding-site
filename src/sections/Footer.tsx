@@ -2,12 +2,15 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Instagram, Facebook, Mail } from 'lucide-react';
+import { WEDDING_DATA } from '@/services/Data';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Footer = () => {
   const footerRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+
+  const contactEmailHref = `mailto:${WEDDING_DATA.contactEmail}`
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -51,12 +54,12 @@ const Footer = () => {
 
         {/* Names */}
         <h3 className="font-playfair text-3xl sm:text-4xl mb-4">
-          Vamshee <span className="text-[#d8af72]">&</span> Sakthi
+          {WEDDING_DATA.groom} <span className="text-[#d8af72]">&</span> {WEDDING_DATA.bride}
         </h3>
 
         {/* Wedding Date */}
         <p className="text-white/60 mb-8 tracking-wider">
-          MAY 9, 2026
+          {WEDDING_DATA.date}
         </p>
 
         {/* Divider */}
@@ -87,7 +90,7 @@ const Footer = () => {
             <Facebook className="w-5 h-5 text-white/70 group-hover:text-white transition-colors" />
           </a>
           <a
-            href="mailto:kkvamshee@gmail.com"
+            href={contactEmailHref}
             className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#d8af72] transition-all duration-300 hover:scale-110 group"
           >
             <Mail className="w-5 h-5 text-white/70 group-hover:text-white transition-colors" />
@@ -100,7 +103,7 @@ const Footer = () => {
           <svg className="w-3 h-3 inline text-[#d8af72]" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
           </svg>{' '}
-          for Vamshee & Sakthi
+          for ${WEDDING_DATA.groom} & ${WEDDING_DATA.bride}
         </p>
         <p className="text-white/30 text-xs mt-2">
           © 2025 All rights reserved

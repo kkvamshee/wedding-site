@@ -208,7 +208,7 @@ const RSVP = () => {
                         onChange={(e) => handleInputChange('guests', parseInt(e.target.value))}
                         className="w-full px-4 py-3 border border-[#d8af72]/30 rounded-lg focus:border-[#d8af72] focus:ring-2 focus:ring-[#d8af72]/20 transition-all duration-300 bg-background"
                       >
-                        {[1, 2, 3, 4, 5].map((num) => (
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => (
                           <option key={num} value={num}>
                             {num} {num === 1 ? 'Guest' : 'Guests'}
                           </option>

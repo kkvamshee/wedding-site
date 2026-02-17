@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Heart, Calendar, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { WEDDING_DATA } from '@/services/Data';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -174,9 +175,9 @@ const Hero = () => {
           ref={titleRef}
           className="font-playfair text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-white mb-8 text-shadow"
         >
-          <span className="inline-block">Vamshee</span>
+          <span className="inline-block">{WEDDING_DATA.groom}</span>
           <span className="inline-block mx-4 text-[#d8af72]">&</span>
-          <span className="inline-block">Sakthi</span>
+          <span className="inline-block">{WEDDING_DATA.bride}</span>
         </h1>
 
         {/* Date */}
@@ -185,7 +186,7 @@ const Hero = () => {
           className="text-white/90 text-lg sm:text-xl md:text-2xl flex items-center justify-center gap-3 mb-10"
         >
           <Calendar className="w-5 h-5 text-[#d8af72]" />
-          <span>May 9, 2026</span>
+          <span>{WEDDING_DATA.date}</span>
         </p>
 
         {/* CTA Buttons */}

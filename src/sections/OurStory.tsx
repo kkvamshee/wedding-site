@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Heart } from 'lucide-react';
+import { STORY_TIMELINE_EVENTS } from '@/services/Data';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -11,37 +12,6 @@ export interface TimelineEvent {
   description: string;
   image: string;
 }
-
-const timelineEvents: TimelineEvent[] = [
-  {
-    date: 'January 2020',
-    title: 'The First Meeting',
-    description:
-      'We met at a mutual friend\'s party. Little did we know that this chance encounter would change our lives forever. The connection was instant, and we talked for hours.',
-    image: 'images/timeline-1.jpg',
-  },
-  {
-    date: 'February 2020',
-    title: 'Our First Date',
-    description:
-      'A romantic walk in the park followed by dinner at our favorite restaurant. We laughed, shared stories, and realized we had found something special.',
-    image: 'images/timeline-2.jpg',
-  },
-  {
-    date: 'December 2024',
-    title: 'The Proposal',
-    description:
-      'Under a sky full of stars, Alex got down on one knee and asked the question that would begin our forever. It was the most magical moment of our lives.',
-    image: 'images/timeline-3.jpg',
-  },
-  {
-    date: 'June 2025',
-    title: 'The Wedding',
-    description:
-      'We can\'t wait to celebrate our love surrounded by family and friends. Join us as we begin this new chapter of our lives together.',
-    image: 'images/timeline-4.jpg',
-  },
-];
 
 const OurStory = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -188,7 +158,7 @@ const OurStory = () => {
 
           {/* Timeline Items */}
           <div className="space-y-16 md:space-y-24">
-            {timelineEvents.map((event, index) => (
+            {STORY_TIMELINE_EVENTS.map((event, index) => (
               <div
                 key={index}
                 className={`timeline-item relative grid md:grid-cols-2 gap-8 md:gap-16 items-center ${

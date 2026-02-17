@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { X, ZoomIn } from 'lucide-react';
+import { GALLERY_IMAGES } from '@/services/Data';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,15 +11,6 @@ export interface GalleryImage {
   alt: string;
   aspectRatio: string;
 }
-
-const galleryImages: GalleryImage[] = [
-  { src: 'images/gallery-1.jpg', alt: 'Couple dancing', aspectRatio: 'aspect-[3/4]' },
-  { src: 'images/gallery-2.jpg', alt: 'Wedding bouquet', aspectRatio: 'aspect-[4/3]' },
-  { src: 'images/gallery-3.jpg', alt: 'Happy couple', aspectRatio: 'aspect-square' },
-  { src: 'images/gallery-4.jpg', alt: 'Reception table', aspectRatio: 'aspect-[3/4]' },
-  { src: 'images/gallery-5.jpg', alt: 'Sunset moment', aspectRatio: 'aspect-[4/3]' },
-  { src: 'images/gallery-6.jpg', alt: 'Wedding rings', aspectRatio: 'aspect-square' },
-];
 
 const Gallery = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -99,9 +91,9 @@ const Gallery = () => {
   }, []);
 
   // Split images into 3 columns
-  const column1 = galleryImages.filter((_, i) => i % 3 === 0);
-  const column2 = galleryImages.filter((_, i) => i % 3 === 1);
-  const column3 = galleryImages.filter((_, i) => i % 3 === 2);
+  const column1 = GALLERY_IMAGES.filter((_, i) => i % 3 === 0);
+  const column2 = GALLERY_IMAGES.filter((_, i) => i % 3 === 1);
+  const column3 = GALLERY_IMAGES.filter((_, i) => i % 3 === 2);
 
   return (
     <section

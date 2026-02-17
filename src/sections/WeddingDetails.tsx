@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Clock, MapPin, Shirt, Utensils, Music, Car } from 'lucide-react';
+import { EVENT_DETAILS } from '@/services/Data';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,51 +12,6 @@ export interface DetailCard {
   subContent?: string;
   span: string;
 }
-
-const details: DetailCard[] = [
-  {
-    icon: Clock,
-    title: 'When',
-    content: 'May 9th, 2025',
-    subContent: 'Ceremony: 9:40 AM',
-    span: 'col-span-2',
-  },
-  {
-    icon: MapPin,
-    title: 'Where',
-    content: 'Landmark Conventions',
-    subContent: 'ECIL, Hyderabad',
-    span: 'col-span-2',
-  },
-  {
-    icon: Shirt,
-    title: 'Dress Code',
-    content: 'Semi - Formal Attire',
-    subContent: 'Look Cool',
-    span: 'col-span-1 row-span-2',
-  },
-  {
-    icon: Utensils,
-    title: 'Lunch',
-    content: 'Dinner & Dancing',
-    subContent: 'Starts at 6:00 PM',
-    span: 'col-span-1',
-  },
-  {
-    icon: Music,
-    title: 'Entertainment',
-    content: 'Live Band',
-    subContent: 'DJ until midnight',
-    span: 'col-span-1',
-  },
-  {
-    icon: Car,
-    title: 'Parking',
-    content: 'Valet Available',
-    subContent: 'Free for guests',
-    span: 'col-span-2',
-  },
-];
 
 const WeddingDetails = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -156,7 +111,7 @@ const WeddingDetails = () => {
           ref={gridRef}
           className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
         >
-          {details.map((detail, index) => {
+          {EVENT_DETAILS.map((detail, index) => {
             const Icon = detail.icon;
             return (
               <div
