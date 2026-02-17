@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Instagram, Facebook, Mail } from 'lucide-react';
+import { Instagram, Mail } from 'lucide-react';
 import { WEDDING_DATA } from '@/services/Data';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -80,14 +80,6 @@ const Footer = () => {
             className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#d8af72] transition-all duration-300 hover:scale-110 group"
           >
             <Instagram className="w-5 h-5 text-white/70 group-hover:text-white transition-colors" />
-          </a>
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#d8af72] transition-all duration-300 hover:scale-110 group"
-          >
-            <Facebook className="w-5 h-5 text-white/70 group-hover:text-white transition-colors" />
           </a>
           <a
             href={contactEmailHref}
