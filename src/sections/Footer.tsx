@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Mail } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import { WEDDING_DATA } from '@/services/Data';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -73,6 +74,21 @@ const Footer = () => {
 
         {/* Social Links */}
         <div className="flex items-center justify-center gap-6 mb-8">
+          <a 
+            href={`https://wa.me/6591747872`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ 
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              marginTop: '1rem',
+              textDecoration: 'none',
+              fontSize: '0.9rem'
+            }}
+          >
+            <FaWhatsapp size={20} />
+          </a>
           <a
             href={contactEmailHref}
             className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#d8af72] transition-all duration-300 hover:scale-110 group"
