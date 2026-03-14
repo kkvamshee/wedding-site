@@ -8,6 +8,7 @@ import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
 import { toast } from 'sonner';
 import { submitRSVP, type RSVPData } from '@/services/rsvpService';
+import { WEDDING_DATA } from '@/services/Data';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -295,8 +296,8 @@ const RSVP = () => {
         <div className="mt-8 text-center">
           <p className="text-xs text-muted-foreground/70">
             Your response is securely stored. For any questions, please contact us at{' '}
-            <a href="mailto:kkvamshee@gmail.com" className="text-[#d8af72] hover:underline">
-              kkvamshee@gmail.com
+            <a href={`mailto:${WEDDING_DATA.contactEmail}`} className="text-[#d8af72] hover:underline">
+              {WEDDING_DATA.contactEmail}
             </a>
           </p>
         </div>

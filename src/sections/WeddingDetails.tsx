@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { EVENT_DETAILS } from '@/services/Data';
+import { EVENT_DETAILS, WEDDING_DATA } from '@/services/Data';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -157,10 +157,10 @@ const WeddingDetails = () => {
               Questions? Contact us at{' '}
             </span>
             <a
-              href="mailto:kkvamshee@gmail.com"
+              href={`mailto:${WEDDING_DATA.contactEmail}`}
               className="text-[#d8af72] hover:underline text-sm font-medium"
             >
-              kkvamshee@gmail.com
+              {WEDDING_DATA.contactEmail}
             </a>
           </div>
         </div>
