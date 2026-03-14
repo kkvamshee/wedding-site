@@ -14,7 +14,7 @@ export const WEDDING_DATA: WeddingData = {
     groom: "Vamshee",
     bride: "Sakthi",
     date: "May 9th, 2026",
-    contactEmail: "kkvamshee@gmail.com"
+    contactEmail: "vamsheesakthi@gmail.com"
 }
 
 export const STORY_TIMELINE_EVENTS: TimelineEvent[] = [
