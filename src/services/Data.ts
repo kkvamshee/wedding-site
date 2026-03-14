@@ -51,8 +51,8 @@ export const EVENT_DETAILS: DetailCard[] = [
   {
     icon: Clock,
     title: 'When',
-    content: 'May 9th, 2025',
-    subContent: 'Ceremony: 9:40 AM',
+    content: 'May 9th, 2026',
+    subContent: 'Ceremony: 9:30 AM',
     span: 'col-span-2',
   },
   {
@@ -65,22 +65,20 @@ export const EVENT_DETAILS: DetailCard[] = [
   {
     icon: Shirt,
     title: 'Dress Code',
-    content: 'Semi - Formal Attire',
-    subContent: 'Look Cool',
+    content: 'Traditional Indian Wear',
     span: 'col-span-1 row-span-2',
   },
   {
     icon: Utensils,
-    title: 'Lunch',
-    content: 'Dinner & Dancing',
-    subContent: 'Starts at 6:00 PM',
+    title: 'Food',
+    content: 'Breakfast & Lunch',
     span: 'col-span-1',
   },
   {
     icon: Music,
     title: 'Entertainment',
     content: 'Live Band',
-    subContent: 'DJ until midnight',
+    subContent: 'DJ until evening',
     span: 'col-span-1',
   },
   {
