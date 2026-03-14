@@ -1,5 +1,3 @@
-import emailjs from '@emailjs/browser';
-
 // Configuration - Replace these with your actual credentials
 const CONFIG = {
   // JSONBin.io - Free tier: 10k requests/month

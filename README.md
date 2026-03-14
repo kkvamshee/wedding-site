@@ -48,100 +48,11 @@ npm run dev
 npm run build
 ```
 
-## 📋 Customization Guide
-
-### 1. Update Couple Names
-
-Edit `src/sections/Hero.tsx`:
-```tsx
-<h1>
-  <span>Alex</span>
-  <span>&</span>
-  <span>Sarah</span>
-</h1>
-```
-
-### 2. Update Wedding Date
-
-Edit `src/sections/Hero.tsx`:
-```tsx
-<span>June 15, 2025</span>
-```
-
-### 3. Update Wedding Details
-
-Edit `src/sections/WeddingDetails.tsx`:
-```tsx
-const details = [
-  {
-    title: 'When',
-    content: 'Your Wedding Date',
-    subContent: 'Ceremony Time',
-  },
-  {
-    title: 'Where',
-    content: 'Your Venue Name',
-    subContent: 'Venue Address',
-  },
-  // ...
-];
-```
-
-### 4. Update Timeline Story
-
-Edit `src/sections/OurStory.tsx`:
-```tsx
-const timelineEvents = [
-  {
-    date: 'Your Date',
-    title: 'Your Title',
-    description: 'Your story...',
-    image: '/images/your-image.jpg',
-  },
-  // ...
-];
-```
-
-### 5. Replace Images
-
-Replace images in `public/images/` folder:
-- `hero-bg.jpg` - Hero background (16:9)
-- `timeline-1.jpg` to `timeline-4.jpg` - Timeline images (3:4)
-- `gallery-1.jpg` to `gallery-6.jpg` - Gallery images (various ratios)
-
-### 6. Update Contact Information
-
-Edit `src/sections/WeddingDetails.tsx` and `src/sections/RSVP.tsx`:
-```tsx
-<a href="mailto:wedding@alexandsarah.com">
-  wedding@alexandsarah.com
-</a>
-```
-
 ## 💾 RSVP Data Storage & Notifications Setup
 
 The website includes a complete RSVP system with data storage and notifications.
 
-### Step 1: JSONBin.io (Data Storage) - FREE
-
-1. Go to [JSONBin.io](https://jsonbin.io) and create an account
-2. Create a new bin with this structure:
-```json
-{
-  "rsvps": []
-}
-```
-3. Copy your **X-Master-Key** and **Bin ID**
-4. Update `src/services/rsvpService.ts`
-
-### Step 2: EmailJS (Email Notifications) - FREE (200 emails/month)
-
-1. Go to [EmailJS](https://www.emailjs.com/) and create an account
-2. Create an Email Service and Email Template
-3. Copy your **Service ID**, **Template ID**, and **Public Key**
-4. Update `src/services/rsvpService.ts`
-
-### Step 3: Telegram Bot (Telegram Notifications) - FREE
+### Telegram Bot (Telegram Notifications) - FREE
 
 1. Message **@BotFather** on Telegram
 2. Create a new bot and get your **Bot Token**
@@ -178,7 +89,7 @@ The website is fully responsive:
 - **UI Components**: shadcn/ui
 - **Animations**: GSAP + ScrollTrigger
 - **Icons**: Lucide React
-- **Notifications**: EmailJS + Telegram Bot API
+- **Notifications**: Telegram Bot API
 - **Data Storage**: JSONBin.io (or localStorage fallback)
 
 ## 📄 License
