@@ -8,13 +8,15 @@ export interface WeddingData {
     bride: string;
     date: string;
     contactEmail: string;
+    contactNumber: string;
 }
 
 export const WEDDING_DATA: WeddingData = {
     groom: "Vamshee",
     bride: "Sakthi",
     date: "May 9th, 2026",
-    contactEmail: "vamsheesakthi@gmail.com"
+    contactEmail: "vamsheesakthi@gmail.com",
+    contactNumber: "+6591747872"
 }
 
 export const STORY_TIMELINE_EVENTS: TimelineEvent[] = [

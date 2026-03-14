@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Mail } from 'lucide-react';
+import { Mail, MessageCircle } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { WEDDING_DATA } from '@/services/Data';
 
@@ -12,6 +12,7 @@ const Footer = () => {
   const contentRef = useRef<HTMLDivElement>(null);
 
   const contactEmailHref = `mailto:${WEDDING_DATA.contactEmail}`
+  const contactPhoneHref = `https://wa.me/${WEDDING_DATA.contactNumber}`
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -74,20 +75,11 @@ const Footer = () => {
 
         {/* Social Links */}
         <div className="flex items-center justify-center gap-6 mb-8">
-          <a 
-            href={`https://wa.me/6591747872`}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ 
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-              marginTop: '1rem',
-              textDecoration: 'none',
-              fontSize: '0.9rem'
-            }}
+          <a
+            href={contactPhoneHref}
+            className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#d8af72] transition-all duration-300 hover:scale-110 group"
           >
-            <FaWhatsapp size={20} />
+            <MessageCircle className="w-5 h-5 text-white/70 group-hover:text-white transition-colors" />
           </a>
           <a
             href={contactEmailHref}
