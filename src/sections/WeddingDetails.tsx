@@ -11,6 +11,7 @@ export interface DetailCard {
   content: string;
   subContent?: string;
   span: string;
+  href?: string;
 }
 
 const WeddingDetails = () => {
@@ -81,6 +82,10 @@ const WeddingDetails = () => {
     return () => ctx.revert();
   }, []);
 
+  const onEventDetailClick = (e: any, detail: DetailCard) => {
+    if (detail.href) window.open(detail.href, "_blank");
+  }
+
   return (
     <section
       id="details"
@@ -117,6 +122,7 @@ const WeddingDetails = () => {
               <div
                 key={index}
                 className={`detail-card group relative bg-card hover:bg-muted p-6 md:p-8 transition-all duration-500 hover:shadow-xl hover:scale-[1.02] cursor-pointer overflow-hidden ${detail.span}`}
+                onClick={e => onEventDetailClick(e, detail)}
               >
                 {/* Hover Border Effect */}
                 <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#d8af72] transition-colors duration-500" />

@@ -63,6 +63,7 @@ export const EVENT_DETAILS: DetailCard[] = [
     content: 'Landmark Conventions',
     subContent: 'ECIL, Hyderabad',
     span: 'col-span-2',
+    href: 'https://maps.app.goo.gl/4RD8zJHGUjTuzPkn7'
   },
   {
     icon: Shirt,
