@@ -19,28 +19,27 @@ export const WEDDING_DATA: WeddingData = {
 
 export const STORY_TIMELINE_EVENTS: TimelineEvent[] = [
   {
-    date: 'January 2020',
+    date: 'July 2021',
     title: 'The First Meeting',
-    description:
-      'We met at a mutual friend\'s party. Little did we know that this chance encounter would change our lives forever. The connection was instant, and we talked for hours.',
+    description: `We first met during an archery game and happened to be on the same team. Together we won the game, exchanged phone numbers, and started talking. What began as a simple meeting soon turned into something beautiful — a story we never expected, but are forever grateful for.`,
     image: 'images/timeline-1.jpg',
   },
   {
-    date: 'February 2020',
+    date: 'August 2021',
     title: 'Our First Date',
     description:
-      'A romantic walk in the park followed by dinner at our favorite restaurant. We laughed, shared stories, and realized we had found something special.',
+      `We planned a romantic rooftop dinner, but Singapore's rain had other plans. Instead, we went to watch a movie. It was a simple evening, but we found comfort and peace in each other's company.`,
     image: 'images/timeline-2.jpg',
   },
   {
-    date: 'December 2024',
+    date: 'November 2025',
     title: 'The Proposal',
     description:
-      'Under a sky full of stars, Alex got down on one knee and asked the question that would begin our forever. It was the most magical moment of our lives.',
+      'By the sea, under a beautiful sunset, with the sound of waves around us, Vamshee went down on one knee and asked the question that would begin our forever. It was the most magical moment of our lives. 💍',
     image: 'images/timeline-3.jpg',
   },
   {
-    date: 'June 2025',
+    date: 'May 2026',
     title: 'The Wedding',
     description:
       'We can\'t wait to celebrate our love surrounded by family and friends. Join us as we begin this new chapter of our lives together.',
